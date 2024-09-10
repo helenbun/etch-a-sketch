@@ -4,18 +4,24 @@ body {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     box-sizing: border-box;
+    background-color: aliceblue;
+}
+
+#header {
+    padding-top: 40px;
+    align-self: baseline;
 }
 
 #container {
     height: 800px;
     width: 800px;
-    background-color: blueviolet;
     display: flex;
     flex-direction: column;
     border: 1px solid gray;
+    margin-right: 360px;
 }
 
 .horizontal,
@@ -25,7 +31,7 @@ body {
 }
 
 .pixel {
-    background-color: azure;
+    background-color: white;
 }
 
 .filled {
