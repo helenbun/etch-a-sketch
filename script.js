@@ -17,18 +17,20 @@ function generateGrid(size){
 //generate grid of specified size.
 for (i=0; i<size;i++) {
 const horizontal = document.createElement("div");
-horizontal.classList.add("horizontal", "pixel");
+horizontal.classList.add("horizontal");
 for (j=0; j<size; j++){
     const vertical = document.createElement("div");
-    vertical.classList.add("vertical", "pixel");
+    vertical.classList.add("vertical", "pixel", "filled");
     horizontal.appendChild(vertical);
 }
 container.appendChild(horizontal);
 }
-const pixels = document.querySelectorAll(".pixel");
+const pixels = document.querySelectorAll(".filled");
 pixels.forEach(pixel => {
+    let opacity = 0;
     pixel.addEventListener("mouseenter", () => {
-        pixel.classList.add("filled");
+        opacity += 0.1;
+        pixel.style.opacity = opacity;
     })    
 });
 }
